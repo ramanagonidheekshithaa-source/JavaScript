@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4 Column Layout with Background Color Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1 1 22%; /* Four columns with spacing */
+      box-sizing: border-box;
+      padding: 15px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .description {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .color-button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .color-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Gallery of Images</h1>
+
+  <div class="container">
+    <div class="column">
+      <img src="bird.png" alt="Image 1">
+      <p class="description">Earlier birds are uesd to transport letters</p>
+    </div>
+    <div class="column">
+      <img src="devi.png" alt="Image 2">
+      <p class="description"> There are 9 days of Navratri </p>
+    </div>
+    <div class="column">
+      <img src="peacock.png" alt="Image 3">
+      <p class="description">Peacock is a National Bird</p>
+    </div>
+    <div class="column">
+      <img src="tiger.png" alt="Image 4">
+      <p class="description">Tiger is a National Animal</p>
+    </div>
+  </div>
+
+  <button class="color-button" onclick="changeBackgroundColor()">Change Background Color</button>
+
+  <script>
+    const colors = ["#f2f2f2", "#e6ffe6", "#ffe6e6", "#e6f7ff", "#fff0e6"];
+    let currentColorIndex = 0;
+
+    function changeBackgroundColor() {
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+      document.body.style.backgroundColor = colors[currentColorIndex];
+    }
+  </script>
+
+</body>
+</html>
