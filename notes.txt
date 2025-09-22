@@ -1,2 +1,9 @@
 supports both frontend and backend
 it is having document object model
+commit is used to understand the code by other developers
+data types:
+there aretwo types they are 1)premetive and 2)non premetive
+premetive-number,string,boolean,null,undefined
+non premetive-array,object
+typeof()-to understand which type of data is there(or)know the data type
+thiswindow-command to display the functions of java script
